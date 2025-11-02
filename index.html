@@ -6,6 +6,19 @@
     </title>
   </head>
   <body>
-    <img src="https://png.pngtree.com/recommend-works/png-clipart/20250101/ourmid/pngtree-cute-school-cartoon-png-image_15006329.png">
+    <img src="https://png.pngtree.com/recommend-works/png-clipart/20250101/ourmid/pngtree-cute-school-cartoon-png-image_15006329.png" height="256px" width="256px">
+    <p>
+      Students: <span id="students">0</span>
+    </p>
+
+    <script>
+      var students = 0;
+
+      function addToStudents(amount) {
+        students = students + 1;
+
+        document.getElementById("students").innerHTML = students;
+      }
+    </script>
   </body>
 </html>
