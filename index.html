@@ -14,21 +14,39 @@
     </title>
   </head>
   <body>
-    <p>
-      Students: <span id="students">0</span>
-    </p>
+    <p>Students: <span id="students">0</span></p>
     <button onclick="addToStudents(1)" class="colorbutton">
       Get a student
+    </button>
+    <p>Rebirths: <span id="rebirths">0</span></p>
+    <button onclick="rebirth()" class="colorbutton">
+      Rebirths available [<span id="rebirthsavailable">0</span>]
     </button>
 
     <script>
       var students = 0;
+      var rebirths = 0;
+      var rebirthsavailable = 0;
 
       function addToStudents(amount) {
-        students = students + amount;
+        students = students + amount + rebirths;
 
         document.getElementById("students").innerHTML = students;
       }
+
+      function rebirth() {
+        if (rebirthsavailable >= 1) {
+          rebirths = rebirths + rebirthsavailable
+          students = 0
+          rebirthsavailable = 0
+          document.getElementById("students").innerHTML = students;
+          document.getElementById("rebirths").innerHTML = rebirths;
+          document.getElementById("rebirthsavailable").innerHTML = rebirthsavailable;
+        }
+
+      setInterval(function() {
+        rebirthsavailable = Math.round(15*Math.sqrt(students/100000));
+      }, 1000)
     </script>
   </body>
 </html>
