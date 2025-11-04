@@ -6,18 +6,18 @@
     </title>
   </head>
   <body>
-    <button>
-      Get a student
-    </button>
     <p>
       Students: <span id="students">0</span>
     </p>
+    <button onclick="addToStudents(1)">
+      Get a student
+    </button>
 
     <script>
       var students = 0;
 
       function addToStudents(amount) {
-        students = students + 1;
+        students = students + amount;
 
         document.getElementById("students").innerHTML = students;
       }
