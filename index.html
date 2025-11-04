@@ -2,12 +2,12 @@
 <html>
   <head>
     <style>
-    body {
-      background-color: black;
-      color: white;
-    .colorbutton {
-      background-color: midnightblue;
-      color: white;
+      body {
+        background-color: black;
+        color: white;
+      .colorbutton {
+        background-color: midnightblue;
+        color: white;
     </style>
     <title>
       School Clicker
@@ -43,6 +43,7 @@
           document.getElementById("rebirths").innerHTML = rebirths;
           document.getElementById("rebirthsavailable").innerHTML = rebirthsavailable;
         }
+      }
 
       setInterval(function() {
         rebirthsavailable = Math.round(15*Math.sqrt(students/100000));
